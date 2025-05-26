@@ -1,6 +1,12 @@
 'use strict';
 
 import {checkUVForecast} from './modules/uviApi.js';
+import {checkCurrentUVIndex} from './modules/uviApi.js';
+
+async function showCurrentUV() {
+  const current = await checkCurrentUVIndex();
+  console.log('Current UV index:', current);
+}
 
 // If the UV index is 3 or higher, show a Chrome notification
 async function showUVAlert() {
@@ -41,6 +47,7 @@ chrome.action.onClicked.addListener(() => {
     when: Date.now(),
     periodInMinutes: 60 * 24
   });
+  showCurrentUV();
 });
 
 // Alarm listener: when any alarm activated, check if it's the UV alarm
