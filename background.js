@@ -2,6 +2,8 @@
 
 import {checkUVForecast} from './modules/uviApi.js';
 import {checkCurrentUVIndex} from './modules/uviApi.js';
+import {setIconColor} from './modules/setIconColor.js';
+
 
 async function showCurrentUV() {
   const current = await checkCurrentUVIndex();
@@ -14,7 +16,7 @@ async function showUVAlert() {
   if(maxUV >= 3) {
       chrome.notifications.create({
       type: "basic",
-      iconUrl: "images/icon-128.png",
+      iconUrl: "images/icon-red-128.png",
       title: "High UV index today!",
       message: "Don't forget to apply sunscreen!",
       priority: 2
@@ -48,6 +50,7 @@ chrome.action.onClicked.addListener(() => {
     periodInMinutes: 60 * 24
   });
   showCurrentUV();
+  setIconColor();
 });
 
 // Alarm listener: when any alarm activated, check if it's the UV alarm
