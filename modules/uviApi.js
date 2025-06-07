@@ -1,5 +1,6 @@
 'use strict';
 
+// Fetches and returns the current UV index for the specified coordinates
 export async function checkCurrentUVIndex() {
     const response = await fetch('https://currentuvindex.com/api/v1/uvi?latitude=48.16&longitude=17.12');
     const data = await response.json();

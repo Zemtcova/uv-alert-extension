@@ -26,7 +26,6 @@ async function showUVAlert() {
 
 // Create an hourly alarm that updates the icon color based on the current UV index
 createHourlyUVAlarm();
-chrome.alarms.onAlarm.addListener(onHourlyUVAlarm);
 
 // When the extension is installed, set an alarm to run every 24 hours (once a day)
 // Starts 10 seconds after install
