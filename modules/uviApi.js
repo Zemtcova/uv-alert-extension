@@ -8,7 +8,7 @@ export async function checkCurrentUVIndex() {
     return currentUV;
 }
 
-// Asynchronous function that fetches today's UV forecast and shows a notification if the UV index is high
+// Asynchronous function that fetches today's UV forecast and return max UV index
 export async function checkUVForecast() {
   try {
      // Fetch UV forecast data from external API for a specific location (Bratislava)

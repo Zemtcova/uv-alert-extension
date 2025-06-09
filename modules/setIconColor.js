@@ -2,6 +2,7 @@
 
 import {checkCurrentUVIndex} from './uviApi.js';
 
+// Sets the extension icon color based on the current UV index level
 async function selectColor() {
     const uv = await checkCurrentUVIndex();
     let color;
