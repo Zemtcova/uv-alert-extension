@@ -23,7 +23,7 @@ In case the extension does not send alarms, please check that you have Google Ch
 ## Developer Notes
 - This extension uses a public UV forecast API:
   [currentuvindex.com](https://currentuvindex.com)
-- You can adjust the location (latitude/longitude) in `background.js`
+- You can adjust the location (latitude/longitude) in `uviApi.js`
 
 ## License
 MIT
