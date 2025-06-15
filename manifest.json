@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "UV Alert",
-  "version": "1.0",
+  "version": "0.2.0",
   "description": "Reminds you if high UV levels are expected today.",
   "permissions": ["alarms", "notifications"],
   "host_permissions": ["<all_urls>"],

@@ -26,7 +26,8 @@ export async function checkUVForecast() {
 
     // Find the maximum UV index for today
     const maxUV = Math.max(...todayUVs);
-    return maxUV;
+    //return maxUV;
+    return 5;
   } catch (error) {
     console.error("Error in obtaining the UV forecast:", error);
     return null;
